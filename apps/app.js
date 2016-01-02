@@ -34,9 +34,9 @@ function submitValuation(searchTerm){
 
 function displayResults(results){
 	console.log(results);
+	$("#search-results").html(" ");
+	$("#search-term").blur();
 	$.each(results, function(index,value){
-		$("#search-results").html(" ");
-		$("#search-term").blur();
 		$("#search-results").append('<img src="' + value.Poster + '"></br>');
 		$("#search-results").append(value.Title + ' ' + value.Year + '</br>' );
 	});
